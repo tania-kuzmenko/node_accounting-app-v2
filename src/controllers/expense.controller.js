@@ -27,10 +27,6 @@ const get = (req, res) => {
     result = result.filter((e) => new Date(e.spentAt) <= toDate);
   }
 
-  if (!result) {
-    return res.status(404).send('Not Found');
-  }
-
   res.send(result);
 };
 
